@@ -1,8 +1,5 @@
 <?php
 
-/**
- * Class Traveller
- */
 class Traveller
 {
     private $age;
@@ -27,7 +24,7 @@ class Traveller
      */
     public function setFirstname($firstname)
     {
-        if (!preg_match("/[a-zA-Z\-\s]+/", $firstname) && strlen($firstname) < 50)
+        if (!preg_match("/[a-zA-Z]{1,50}$/", $firstname))
             return false;
 
         $this->firstname = $firstname;
@@ -47,7 +44,7 @@ class Traveller
      */
     public function setLastname($lastname)
     {
-        if (!preg_match("/[a-zA-Z\-\s]+/", $lastname) && strlen($lastname) > 1 && strlen($lastname) < 60)
+        if (!preg_match("/[a-zA-Z]{1,50}$/", $lastname))
             return false;
 
         $this->lastname = $lastname;

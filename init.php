@@ -1,9 +1,10 @@
 <?php
 
-define('DOMAIN', 'localhost');
+define('DOMAIN', 'localhost:8888');
+
 define('SCHEME', 'http');
 
-if ($_SERVER['SERVER_PORT'] != 80) { 	// not default web port
+if ($_SERVER['SERVER_PORT'] != 8888) { 	// not default web port
 	define('WEB_DOMAIN', SCHEME . '://' . DOMAIN . ':' . $_SERVER['SERVER_PORT']);
 } else { 								// default port
 	define('WEB_DOMAIN', SCHEME . '://' . DOMAIN);
