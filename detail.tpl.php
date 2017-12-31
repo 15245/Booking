@@ -97,9 +97,9 @@
         <!-- START: Pagination -->
         <div class="nk-pagination nk-pagination-center">
             <div class="container">
-                <a class="nk-pagination-prev" href="/"><span class="pe-7s-angle-left"></span>Previous page</a>
-                <a class="nk-icon nk-pagination-center" href="cancel.php"><span class="pe-7s-angle-center"></span>Cancelling the reservation</a>
-                <button type="submit" class="nk-pagination-next">Next step<span class="pe-7s-angle-right"></span></button>
+                <button class="btn" type="button" onclick="location.href='/'">Previous page</button>
+                <button class="btn" type="button" onclick="location.href='cancel.php'">Cancelling the reservation</button>
+                <button type="submit" class="btn">Next step</span></button>
             </div>
         </div>
         <!-- END: Pagination -->

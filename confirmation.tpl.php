@@ -36,7 +36,8 @@
         <!-- START: Pagination -->
         <div class="nk-pagination nk-pagination-center">
             <div class="container">
-                <a class="nk-icon nk-pagination-center" href="/"><span class="pe-7s-angle-cancel"></span>Return to the main page</a>
+                <button class="btn" type="button" onclick="location.href='/'">Return to the main page</button>
+                <button class="btn" type="button" onclick="location.href='admin/index.php'">Show booking list</button>
             </div>
         </div>
         <!-- END: Pagination -->
@@ -53,7 +54,7 @@
     <!-- START: Scripts -->
 
     <script src="<?php echo WEB_JS ?>/combined.js"></script>
-    
+
     <!-- END: Scripts -->
 
 </body>

@@ -53,7 +53,7 @@
                             <div class="nk-subtitle text-black"><label for="destination">Destination</label>
                             <select name="destination" id="destination">
                                 <?php foreach ($booking->getDestinations() as $destination) { ?>
-                                <option value="<?php echo $destination ?>"><?php echo $destination ?></option>
+                                <option value="<?php echo $destination ?>" class="text-capitalize"><?php echo ucfirst($destination) ?></option>
                                 <?php } // end foreach destinations ?>
                             </select></div>
                             <div class="nk-subtitle text-black"><label for="nb_passenger">Passengers
@@ -71,9 +71,9 @@
         <!-- START: Pagination -->
         <div class="nk-pagination nk-pagination-center">
             <div class="container">
-                <a class="nk-pagination-prev" href="home"><span class="pe-7s-angle-left"></span>Previous page</a>
-                <a class="nk-icon nk-pagination-center" href="cancel-reservation"><span class="pe-7s-angle-center"></span>Cancelling the reservation</a>
-                <button type="submit" class="nk-pagination-next">Next step<span class="pe-7s-angle-right"></span></button>
+                <!-- <a class="nk-icon nk-pagination-center" href="cancel-reservation"><span class="pe-7s-angle-center"></span>Cancelling the reservation</a> -->
+                <button class="btn" type="button" onclick="location.href='cancel.php'">Cancelling the reservation</button>
+                <button type="submit" type="button" class="btn">Next step<span class="pe-7s-angle-right"></span></button>
             </div>
         </div>
         <!-- END: Pagination -->
@@ -84,20 +84,42 @@
 
         <!-- START: Group -->
         <div class="nk-box bg-dark-1 text-white">
-            <div class="bg-image bg-image-parallax" style="background-image: url('<?php echo WEB_IMAGES ?>/bg-pattern.jpg');"></div>
-            <div class="nk-gap-5 mnt-6"></div>
             <div class="container">
-                <div style="text-align: right;padding-right: 0px">
-                    <img src="<?php echo WEB_IMAGES ?>/logo-staralliance-w.png" alt="" width="225">
-                </div>
-                <div style="text-align: left;padding-left: 0px">
-                    <img src="<?php echo WEB_IMAGES ?>/logo-lufthansa-w.png" alt="" width="225">
-                </div>
-                <div style="text-align: center">
-                    <img src="<?php echo WEB_IMAGES ?>/logo-ba-w.png" alt="" width="225">
+                <div class="nk-carousel-2 nk-carousel-x4 nk-carousel-no-margin nk-carousel-all-visible">
+                    <div class="nk-carousel-inner">
+                        <div>
+                            <div class="nk-box-1">
+                                <img src="<?php echo WEB_IMAGES ?>/l-i-ba-w.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="nk-box-1">
+                                <img src="<?php echo WEB_IMAGES ?>/l-e-ba-w.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="nk-box-1">
+                                <img src="<?php echo WEB_IMAGES ?>/l-i-lufthansa-w.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="nk-box-1">
+                                <img src="<?php echo WEB_IMAGES ?>/l-e-lufthansa-w.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="nk-box-1">
+                                <img src="<?php echo WEB_IMAGES ?>/l-i-sa-w.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="nk-box-1">
+                                <img src="<?php echo WEB_IMAGES ?>/l-e-sa-w.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="nk-gap-5 mnt-6"></div>
         </div>
         <!-- END: Group -->
 
@@ -111,7 +133,7 @@
                         <div class="nk-gap mnt-5"></div>
                         <p>Brussels Airlines is the Belgian airline that offers the widest choice of flights to and from the capital of Europe, Brussels Airport. The company has more than 3,500 employees and 50 aircraft operating some 300 flights daily. Brussels Airlines is owned by SN Airholding and is backed up by more than 90 years of aviation experience.
                         </p>
-                        <img src="<?php echo WEB_IMAGES ?>/about-me-signature.png" alt="" class="nk-img-fit">
+                        <img src="<?php echo WEB_IMAGES ?>/signature.png" alt="" class="nk-img-fit">
                         <div class="nk-gap-4 mt-25"></div>
                     </div>
                 </div>
@@ -122,20 +144,42 @@
 
         <!-- START: Group -->
         <div class="nk-box bg-dark-1 text-white">
-            <div class="bg-image bg-image-parallax" style="background-image: url('<?php echo WEB_IMAGES ?>/bg-pattern.jpg');"></div>
-            <div class="nk-gap-5 mnt-6"></div>
             <div class="container">
-                <div style="text-align: right;padding-right: 0px">
-                    <img src="<?php echo WEB_IMAGES ?>/logo-staralliance-w.png" alt="" width="225">
-                </div>
-                <div style="text-align: left;padding-left: 0px">
-                    <img src="<?php echo WEB_IMAGES ?>/logo-lufthansa-w.png" alt="" width="225">
-                </div>
-                <div style="text-align: center">
-                    <img src="<?php echo WEB_IMAGES ?>/logo-ba-w.png" alt="" width="225">
+                <div class="nk-carousel-2 nk-carousel-x4 nk-carousel-no-margin nk-carousel-all-visible">
+                    <div class="nk-carousel-inner">
+                        <div>
+                            <div class="nk-box-1">
+                                <img src="<?php echo WEB_IMAGES ?>/logo-airbus-w.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="nk-box-1">
+                                <img src="<?php echo WEB_IMAGES ?>/logo-sukhoi-w.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="nk-box-1">
+                                <img src="<?php echo WEB_IMAGES ?>/logo-embraer-w.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="nk-box-1">
+                                <img src="<?php echo WEB_IMAGES ?>/logo-boeing-w.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="nk-box-1">
+                                <img src="<?php echo WEB_IMAGES ?>/logo-bae-w.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="nk-box-1">
+                                <img src="<?php echo WEB_IMAGES ?>/logo-avro-w.png" alt="" class="nk-img-fit">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="nk-gap-5 mnt-6"></div>
         </div>
         <!-- END: Group -->
 
@@ -145,13 +189,13 @@
         <div class="nk-box bg-white" id="projects">
             <div class="nk-gap-4 mt-5"></div>
 
-            <h2 class="text-xs-center display-4">The most prized destinations</h2>
+            <h2 class="text-xs-center display-4">Travelling alone?</h2>
 
             <div class="nk-gap mnt-6"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
-                        <div class="text-xs-center">Choose one of the destinations the most appreciated with our company by taking advantage of our experience and our professionalisme
+                        <div class="text-xs-center">Book now a flight just in one click to one of our most prized destinations with cancellation insurance.
                         </div>
                     </div>
                 </div>
