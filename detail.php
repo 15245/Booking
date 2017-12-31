@@ -1,14 +1,5 @@
 <?php
 
-//var_dump($_POST);
-/*
-array(3) {
-    ["destination"]=> string(5) "Ibiza"
-    ["nb_passenger"]=> string(1) "3"
-    ["insurance"]=> string(2) "on"
-}
-*/
-
 require_once 'config/init.php';
 require_once 'models/class.bookingConfiguration.php';
 
@@ -47,7 +38,7 @@ $travellerNum = isset($_POST['passenger_num']) ? $_POST['passenger_num']  : 0;
 // passenger data submited
 if (isset($_POST['detail']) && $travellerNum < $bookingConf->getPassengers()) {
     // verify if it s a data replacement in session
-    
+
     if ($booking->isSetTravellerNum($travellerNum)) { // a traveller already exist : update him
         $traveller = $booking->getTravellerByNumber($travellerNum);
     } else // no existant data in session : create a new one
@@ -68,11 +59,12 @@ if (isset($_POST['detail']) && $travellerNum < $bookingConf->getPassengers()) {
         $errorAge = 'please enter a valid age';
     }
 
-    if (false === isset($error)) { // no error 
+    if (false === isset($error)) { // no error
         if ($booking->isSetTravellerNum($travellerNum)) { // update after modification
             $booking->updateTraveller($traveller, $travellerNum);
         } else
             $booking->addTraveller($traveller);  // add the new one
+
         $travellerNum = $_POST['passenger_num'] + 1;
     } else
         $travellerNum = $_POST['passenger_num'];
